@@ -3,7 +3,7 @@ import { ChzzkEventType } from './chzzk-event-type.enum';
 import { ChzzkUserEntity } from '../chzzk-user';
 
 @Entity('chzzk_streaming_log')
-export class ChzzkStreamingLog {
+export class ChzzkStreamingLogEntity {
   @PrimaryColumn({
     name: 'streamer_uuid',
     length: 255,
