@@ -1,7 +1,7 @@
 import { Expose } from 'class-transformer';
 import { IsNumber, IsString, IsOptional } from 'class-validator';
 
-export class ChzzkApiLiveStatusBaseResponse {
+export class ChzzkBaseResponse {
   @IsNumber()
   @Expose({ name: 'code' })
   code: number;

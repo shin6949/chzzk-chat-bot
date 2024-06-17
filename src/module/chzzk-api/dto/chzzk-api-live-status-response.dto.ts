@@ -7,17 +7,7 @@ import {
   IsArray,
   ValidateNested,
 } from 'class-validator';
-
-export class ChzzkApiLiveStatusBaseResponse {
-  @IsNumber()
-  @Expose({ name: 'code' })
-  code: number;
-
-  @IsString()
-  @IsOptional()
-  @Expose({ name: 'message' })
-  message: string | null;
-}
+import { ChzzkBaseResponse } from './chzzk-api-base-response.dto';
 
 class ChzzkApiLiveStatusContent {
   @IsString()
@@ -103,7 +93,7 @@ class ChzzkApiLiveStatusContent {
   chatDonationRankingExposure: boolean;
 }
 
-export class ChzzkApiLiveStatusResponse extends ChzzkApiLiveStatusBaseResponse {
+export class ChzzkApiLiveStatusResponse extends ChzzkBaseResponse {
   @ValidateNested()
   @Type(() => ChzzkApiLiveStatusContent)
   @Expose({ name: 'content' })
